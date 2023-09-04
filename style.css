@@ -20,6 +20,9 @@ header{
     background: transparent;
 
 }
+body{
+  background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%); 
+}
 
 .logo{
     font-size: 30px;
@@ -50,8 +53,7 @@ header{
 .details{
   height: 100%;
   width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -91,6 +93,13 @@ section{
     height: auto;
     margin-top: 135px;
 }
+.mee-img img{
+  display: none;
+  width: 600px;
+  height: auto;
+  margin-top: 135px;
+}
+
 
 .bn13 {
     display: inline-block;
@@ -192,7 +201,8 @@ section{
   }
 
   .details { 
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction:column-reverse;
       text-align: center;
       padding: 100px 5%;
   }
@@ -202,11 +212,16 @@ section{
       text-align: center;
   }
 
-  .me-img img {
-      width: 100%;
+  .mee-img img {
+      display: block;
+      text-align: center;
+      width: 300px;
       max-width: 400px;
       height: auto;
       margin-top: 30px;
+  }
+  .me-img{
+    display: none ;
   }
   .icons{
     display: none;
@@ -219,8 +234,8 @@ section{
   }
 
 .navlist a:hover {
-  color: cyan; /* Change color on hover */
-  border-bottom: 2px solid cyan; /* Add a border on hover */
+  color: cyan; 
+  border-bottom: 2px solid cyan; 
   }
 
 }

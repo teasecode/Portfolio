@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    
+    <div id="header-container"></div>
+    <section class="contact">
+        </div>
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><i class="fas fa-envelope"></i> Email: nawneetkumar66@gmail.com</p>
+            <p><i class="fas fa-phone-alt"></i>Phone: +91 9263506948</p>
+        </div>
+        
+        <div class="contact-form">
+            <h2>Send me a message</h2>
+            <form action="#" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        // Load the header using JavaScript
+        const headerContainer = document.getElementById("header-container");
+        const headerInclude = new XMLHttpRequest();
+        headerInclude.open("GET", "header.html", true);
+        headerInclude.onreadystatechange = function () {
+            if (headerInclude.readyState === 4 && headerInclude.status === 200) {
+                headerContainer.innerHTML = headerInclude.responseText;
+            }
+        };
+        headerInclude.send();
+    </script>
+</body>
+</html>
